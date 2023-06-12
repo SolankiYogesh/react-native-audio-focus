@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, SafeAreaView, Text, Dimensions } from 'react-native';
-import AudioFocusModule from 'react-native-audio-focus';
+import AudioFocusModule from 'index';
 import Video from 'react-native-video';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
 
   React.useEffect(() => {
     AudioFocusModule.addListener('onAudioFocusChange', (e) => {
-      console.log(e);
+    
       setISPlaying(e === 1);
     });
     return () => {

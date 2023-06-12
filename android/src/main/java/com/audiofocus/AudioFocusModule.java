@@ -84,11 +84,13 @@ public class AudioFocusModule extends ReactContextBaseJavaModule implements Life
 
   @Override
   public void onHostResume() {
+    startListeningForAudioFocus();
     // No need to do anything here since startListeningForAudioFocus is already called in addListener
   }
 
   @Override
   public void onHostPause() {
+    stopListeningForAudioFocus();
     // No need to do anything here since stopListeningForAudioFocus is already called in removeListener
   }
 
